@@ -2,15 +2,15 @@ import * as React from 'react';
 import styled from 'react-emotion';
 export interface AppProps {}
 
-export const App = ({  }: AppProps) => (
+export const App = (): JSX.Element => (
   <div>
     <Header>Hello World!</Header>
-    <p>Foo to the baz</p>
     <Para>idk</Para>
   </div>
 );
 
 const Header = styled.h1`
+  background: red;
   color: green;
 `;
 
