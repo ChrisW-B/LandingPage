@@ -1,0 +1,31 @@
+{"presets": [
+    [
+      "@babel/env",
+      {
+        "modules": false
+      }
+    ],
+    "@babel/react"
+  ],
+  "plugins": [
+    [
+      "emotion",
+      {
+        "sourceMap": true,
+        "autoLabel": true
+      }
+    ],
+    "react-hot-loader/babel"
+  ],
+  "env": {
+    "production": {
+      "plugins": [
+        ["emotion",{ "hoist": true }]
+      ],
+      "presets": ["minify"]
+    },
+    "test": {
+      "presets": ["@babel/env", "@babel/react"]
+    }
+  }
+}
