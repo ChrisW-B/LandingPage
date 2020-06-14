@@ -1,11 +1,22 @@
 import * as React from 'react';
-import { render } from 'react-dom';
+
+import { App } from './components/App';
 import { AppContainer } from 'react-hot-loader';
-import App from './components/App';
+import { injectGlobal } from 'emotion';
+import { render } from 'react-dom';
 
 if (module.hot && process.env.NODE_ENV !== `production`) {
   module.hot.accept();
 }
+
+injectGlobal`
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+  }
+`;
 
 render(
   <AppContainer>
